@@ -1,14 +1,20 @@
 Angular with Inifinite Scroll that pull data from Wordpress Json API
 
-----to run
+to run,
+-----
 install:
 compass, sass, node 8+ w/ npm, bower
-then run
-------bower install
-------npm install
-------grunt serve
 
-----file structure
+run
+ 1) bower install
+ 2) npm install
+ 3) grunt serve
+
+it will open a browser and start the website
+all changes update browser automatically
+
+file structure
+-------------
 all styles are in main.scss under app/styles
 index.html uses main.html view as main and only view.
 
