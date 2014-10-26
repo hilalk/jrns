@@ -1,0 +1,40 @@
+<div class="container" infinite-scroll='getMorePosts()' infinite-scroll-disabled='busy' infinite-scroll-distance='0'>
+	
+<div class="row">
+	<div class="col-xs-11">
+		<div ng-repeat="post in posts">
+
+				<div ng-if="$index % 3 == 0 && $index != 0">
+		    		<div class="row">
+		    			<div class="col-sm-3 tweet">
+		        			<div ng-bind-html="SkipValidation(post.content)"></div>
+		       		 		<div><img src="{{post.thumbnail}}"/></div>
+		       		 	</div>
+		    		</div>
+				</div>
+			
+				
+		    
+		    <div ng-if="$index % 3 != 0">
+		    	<div class="col-sm-3 tweet">
+		        			<div ng-bind-html="SkipValidation(post.content)"></div>
+		       		 		<div><img src="{{post.thumbnail}}"/></div>
+		       	</div>
+			</div>
+
+			
+	 	</div>
+ 	</div>
+	 <div class="col-xs-1 ">
+	 	<div class="timelinemenu">
+	 			menu
+	 	</div>
+ 	</div>
+ </div>	
+ <div class="row">
+	<div class="col-xs-12">
+ 	<div ng-show='busy'>Loading data...</div>
+ 	 	</div>
+ </div>	
+</div>
+
